@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="choices"></div>
+    <h4 id="results"></h4>
+    <script>
+      var resultDisplay = document.querySelector("#results");
+      var choices = document.querySelector("#choices");
+      var options = ["rock", "paper", "scissors"];
+
+      var onClick = (e) => {
+        getResult(
+          e.target.innerHTML,
+          options[Math.floor(Math.random() * options.length)]
+        );
+      };
+
+      options.forEach((option) => {
+        var button = document.createElement("button");
+        button.innerHTML = option;
+        button.addEventListener("click", onClick);
+        choices.appendChild(button);
+      });
+
+      var getResult = (userChoice, computerChoice) => {
+        switch (userChoice + computerChoice) {
+          case "scissorspaper":
+          case "rockscissors":
+          case "paperrock":
+            resultDisplay.innerHTML = `You chose ${userChoice} and computer chose ${computerChoice}. You win!!`;
+            break;
+          case "paperscissors":
+          case "scissorsrock":
+          case "rockpaper":
+            resultDisplay.innerHTML = `You chose ${userChoice} and computer chose ${computerChoice}. You lost!!`;
+            break;
+          case "paperpaper":
+          case "scissorsscissors":
+          case "rockrock":
+            resultDisplay.innerHTML = `You chose ${userChoice} and computer chose ${computerChoice}. Draw!!`;
+            break;
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btns-container {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        width: 400px;
+        justify-content: space-around;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 1000px;
+        margin: 0 auto;
+      }
+
+      #showBodyType {
+        border: 2px solid red;
+        width: 50%;
+        height: 50vh;
+        margin-right: 10px;
+        padding: 0px 50px;
+      }
+
+      #personsList {
+        border: 2px solid green;
+        width: 50%;
+        height: 50vh;
+        padding: 0px 50px;
+      }
+
+      .container input {
+        margin: 5px 0px;
+      }
+
+      .content {
+        margin-top: 10px;
+        margin: 0 auto;
+        display: flex;
+      }
+      .contentCard {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        align-items: center;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>Calculate Bmi</p>
+      <div>
+        <label for="weight">weight</label>
+        <input
+          type="number"
+          name="weight"
+          id="weight"
+          placeholder="Add your weight in kg"
+          required
+        />
+      </div>
+      <div>
+        <label for="height">height</label>
+        <input
+          type="number"
+          name="height"
+          id="height"
+          placeholder="Add your height in meters"
+          required
+        />
+      </div>
+      <div>
+        <label for="name">name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          autofocus
+          placeholder="Enter your first name"
+          required
+        />
+      </div>
+      <div>
+        <label for="gender">gender</label>
+        <input
+          type="text"
+          name="gender"
+          id="gender"
+          placeholder="Not required "
+        />
+      </div>
+      <div class="btns-container">
+        <button type="button" onclick="createPerson()">Create Person</button>
+        <button type="button" onclick="deletePersons()">DeletePersons</button>
+        <button type="button" onclick="calculateBmi()">
+          Calculate Persons BMI
+        </button>
+      </div>
+      <div class="content">
+        <div class="contentCard">
+          <span>Body Types:</span>
+          <div id="showBodyType"></div>
+        </div>
+        <div class="contentCard">
+          <span>List of people:</span>
+          <div id="personsList"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var body = document.getElementById("showBodyType");
+      var personsList = document.getElementById("personsList");
+      var people = [];
+
+      var onInputChange = (e) => {
+        person[e.target.name] = e.target.value;
+      };
+
+      var createPerson = () => {
+        var weight = parseFloat(document.getElementById("weight").value);
+        var height = parseFloat(document.getElementById("height").value);
+        var name = document.getElementById("name").value;
+        var gender = document.getElementById("gender").value;
+        var person = { name, height, gender, weight };
+
+        if (!person.weight || !person.height || !person.name) {
+          return alert("Please complete the required fields!");
+        }
+
+        people.push(person);
+
+        var personSpan = document.createElement("p");
+        personSpan.innerText = `This is ${person.name}`;
+        personsList.appendChild(personSpan);
+      };
+
+      var deletePersons = () => {
+        personsList.innerHTML = "";
+        body.innerHTML = "";
+        people = [];
+      };
+
+      var calculateBmi = () => {
+        if (people.length === 0) {
+          alert("First create a person!");
+        }
+        for (var pers of people) {
+          var bmi = pers.weight / (pers.height * pers.height);
+          var bodyType = () => {
+            if (bmi < 18.5) {
+              return "underweight";
+            } else if (bmi >= 18.5 && bmi < 25) {
+              return "normal";
+            } else if (bmi >= 25 && bmi < 30) {
+              return "overweight";
+            } else {
+              return "obese";
+            }
+          };
+          var display = document.createElement("p");
+          display.innerText = `${pers.name} body type is : ${bodyType()} `;
+          body.appendChild(display);
+        }
+      };
+    </script>
+  </body>
+</html>

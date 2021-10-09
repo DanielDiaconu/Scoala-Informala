@@ -1,0 +1,113 @@
+var property = {
+  id: 1,
+  name: "Modern Mansion",
+  description: "This is here just for testing purpouses",
+  price: 200000,
+  owner: {
+    id: "24vfs",
+    name: "Diaconu Daniel",
+    phone: "0752525252",
+    email: "daniel.diaconu@test.com",
+    address: {
+      street: "Nr 1",
+      city: "Vaslui",
+      country: "Romania",
+    },
+    memberStatus: "pro",
+  },
+  area: 200,
+  address: {
+    street: "25 Park",
+    city: "New York",
+    country: "USA",
+    zipCode: "252525",
+  },
+  bedrooms: 4,
+  bathrooms: 2,
+  amenities: [
+    "Single Bed",
+    "Swimming Pool",
+    "Double Bed",
+    "WiFI",
+    "Air Conditioning",
+    "Security Cameras",
+  ],
+  petsAllowed: true,
+  thumbnail: "thumbnail.jpg",
+  images: [
+    "gallery1.jpg",
+    "gallery2.jpg",
+    "gallery3.jpg",
+    "gallery4.jpg",
+    "gallery5.jpg",
+    "gallery6.jpg",
+  ],
+  build: { year: "2018", month: "January", day: "20" },
+  reviews: [
+    {
+      id: 1,
+      user: { id: 1, fullName: "John Cash", member: true },
+      rating: 5,
+      body: "I was pleased with the property",
+      postedAt: { day: "12", month: "March", year: "2020" },
+    },
+    {
+      id: 2,
+      user: { id: 2, fullName: "Millie Brown", member: true },
+      rating: 3,
+      body: "Perfect for a summer vacation",
+      postedAt: { day: "20", month: "December", year: "2020" },
+    },
+    {
+      id: 3,
+      user: { id: 3, fullName: "Diaconu Daniel", member: true },
+      rating: 4,
+      body: "Been impressed on how modern it was",
+      postedAt: { day: "13", month: "May", year: "2020" },
+    },
+  ],
+  bookings: [
+    {
+      id: 1,
+      date: {
+        day: "25",
+        month: "March",
+        hour: "17PM",
+      },
+      visitor: {
+        id: 1,
+        name: "Drizzy Drake",
+        phone: "076222222",
+        memberStatus: "basic",
+      },
+    },
+    {
+      id: 2,
+      date: {
+        day: "15",
+        month: "June",
+        hour: "12PM",
+      },
+      visitor: {
+        id: 2,
+        name: "Daniel Diaconu",
+        phone: "076321512",
+        memberStatus: "pro",
+      },
+    },
+    {
+      id: 3,
+      date: {
+        day: "06",
+        month: "September",
+        hour: "13PM",
+      },
+      visitor: {
+        id: 3,
+        name: "Johny Boy",
+        phone: "0765215125",
+        memberStatus: "basic",
+      },
+    },
+  ],
+};

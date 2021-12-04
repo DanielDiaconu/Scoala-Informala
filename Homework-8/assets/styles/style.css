@@ -1,0 +1,200 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #f6d365, #fda085);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form button {
+  border: none;
+  outline: none;
+  background: white;
+  margin-top: 5px;
+  border-radius: 10px;
+  width: 100px;
+}
+
+form button {
+  color: #d88771;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  color: white;
+  background: #d88771;
+}
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 10px;
+}
+
+.top-section i {
+  font-size: 34px;
+  color: rgb(18, 190, 18);
+}
+
+.app-title {
+  text-align: center;
+  margin: 10px;
+  color: white;
+  font-size: 44px;
+}
+
+.fa-plus-square {
+  font-size: 34px;
+  padding: 5px 10px;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.form-select {
+  width: 100%;
+}
+.form-select label {
+  font-size: 24px;
+  color: #d88771;
+  font-weight: bold;
+}
+
+button,
+select {
+  border: none;
+  border-radius: 10px;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background: #fff;
+  box-shadow: 2px 1px 10px black;
+  margin: 10px 20px;
+  border-radius: 10px;
+  min-height: 40vh;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+.input-container input {
+  margin: 5px 0px;
+  padding: 5px 10px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.date-label {
+  font-size: 24px;
+  color: #d88771;
+  font-weight: bold;
+}
+
+.date-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.date-container input {
+  width: 50%;
+}
+
+::-webkit-input-placeholder {
+  font-size: 18px;
+}
+
+.task-name {
+  text-align: center;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.task-user-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+}
+
+.task-user {
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.task-status {
+  background: linear-gradient(
+    90deg,
+    rgb(226, 102, 44) 27%,
+    rgb(185, 174, 13) 56%,
+    rgb(187, 125, 9) 84%
+  );
+  padding: 5 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.task-status span {
+  font-size: 22px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.task-deadline {
+  display: flex;
+  margin-top: 120px;
+  padding: 10px;
+  border-top: 1px solid grey;
+  justify-content: space-between;
+}
+
+.task-deadline-date {
+  display: flex;
+  flex-direction: column;
+}

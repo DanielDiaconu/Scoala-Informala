@@ -1,0 +1,46 @@
+{
+    "tasks": [{
+        "taskName": "Pay rent",
+        "taskDescription": "Pay the bills and rent",
+        "taskStatus": "in progress",
+        "startDate": "March 2020",
+        "dueDate":  "July 2021",
+        "assignedUser": "Joe"
+    },{
+        "taskName": "Learn Js Classes",
+        "taskDescription": "Learn about inheritance",
+        "taskStatus": "to do",
+        "startDate": "March 2020",
+        "dueDate":  "November 2021",
+        "assignedUser": "Daniel"
+    },{
+        "taskName": "ES6",
+        "taskDescription": "Learn about EcmaScript 6",
+        "taskStatus": "to do",
+        "startDate": "March 2020",
+        "dueDate":  "March 2021",
+        "assignedUser": "Edy"
+    },{
+        "taskName": "ES6",
+        "taskDescription": "Learn about EcmaScript 6",
+        "taskStatus": "to do",
+        "startDate": "March 2020",
+        "dueDate":  "March 2021",
+        "assignedUser": "Marty"
+    },{
+        "taskName": "ES6",
+        "taskDescription": "Learn about EcmaScript 6",
+        "taskStatus": "to do",
+        "startDate": "March 2020",
+        "dueDate":  "March 2021",
+        "assignedUser": "Rust"
+    },{
+        "taskName": "ES6",
+        "taskDescription": "Learn about EcmaScript 6",
+        "taskStatus": "to do",
+        "startDate": "March 2020",
+        "dueDate":  "March 2021",
+        "assignedUser": "Cole"
+    }
+]
+}

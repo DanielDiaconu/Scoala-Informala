@@ -1,0 +1,143 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+}
+
+td {
+  align-items: center;
+  text-align: center;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+span {
+  color: rgb(219, 219, 219);
+}
+
+input {
+  outline: none;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #4b99e2;
+}
+
+#crew-form {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#add-crew {
+  margin: 0px 10px;
+  padding: 5px;
+  margin-top: 25px;
+}
+
+#add-cast {
+  margin: 0px 10px;
+  padding: 5px;
+}
+
+.fa-user-minus {
+  cursor: pointer;
+}
+
+.top-section {
+  background-color: #1f1f1f;
+}
+
+.movie-info h1 {
+  color: white;
+}
+
+.fa-star {
+  color: #f5c518;
+  font-size: 18px;
+}
+
+.imdb-rating {
+  font-size: 18px;
+}
+
+.metascore-rating {
+  background-color: #54a72a;
+  width: 20px;
+  font-weight: 700;
+  margin-left: 25px;
+}
+
+.certified-img {
+  width: 25px;
+  height: 25px;
+}
+
+.movie-thumbnail {
+  height: 500px;
+  width: 400px;
+  border-radius: 0px;
+  object-fit: cover;
+}
+
+.movie-genre {
+  border: 2px solid grey;
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+
+.movie-description {
+  width: 450px;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.cast-title {
+  color: white;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.list-item {
+  border-top: 1px solid grey;
+  padding: 15px 0px;
+}
+
+.cast-name {
+  color: #4b99e2;
+}
+
+.add-cast-btn {
+  border-radius: 10px;
+  outline: none;
+  padding: 0px 10px;
+  border: 1px solid #4b99e2;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.save-form-btn {
+  border-radius: 10px;
+  border: 1px solid #4b99e2;
+  background-color: #323539;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.warning-message {
+  color: red;
+  position: absolute;
+  bottom: -30px;
+  left: 5px;
+  font-size: 18px;
+}

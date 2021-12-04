@@ -1,0 +1,10 @@
+{
+    "tasks": [{
+        "taskName": "Bills",
+        "taskDescription": "Pay the bills",
+        "status": "to do",
+        "startDate": "March 2020",
+        "dueDate":  "July 2021",
+        "assignedUser": "Daniel"
+    }]
+}

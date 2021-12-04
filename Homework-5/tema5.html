@@ -21,17 +21,15 @@
     var userOption;
     var computerOption;
 
-    var onClick = (e) => {
-      userOption = e.target.id;
+    var onClick = (event) => {
+      userOption = event.target.id;
       userChoice.innerHTML = `User choice: ${userOption}`;
       generateComputerChoice();
       getResult();
     };
 
     var generateComputerChoice = () => {
-      var randomChoice = options[Math.floor(Math.random() * options.length)];
-      computerOption = randomChoice;
-      computerChoice.innerHTML = `Computer choice: ${randomChoice}`;
+      return options[Math.floor(Math.random() * options.length)];
     };
 
     for (var i = 0; i < options.length; i++) {
@@ -43,6 +41,9 @@
     }
 
     var getResult = () => {
+      var computerOption = generateComputerChoice();
+      computerChoice.innerHTML = `Computer choice: ${computerOption}`;
+
       switch (userOption + computerOption) {
         case "scissorspaper":
         case "rockscissors":

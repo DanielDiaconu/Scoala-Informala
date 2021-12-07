@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      border: 1px solid grey;
+      text-align: center;
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <div class="centered">
+      <div class="container">
+        <h2>SVG</h2>
+        <svg width="800" height="600">
+          <rect x="200" fill="coral" y="260" width="380" height="300"></rect>
+          <circle
+            cx="280"
+            cy="490"
+            r="5"
+            fill="coral"
+            stroke="white"
+            stroke-width="3"
+          ></circle>
+          <circle
+            cx="320"
+            cy="490"
+            r="5"
+            fill="coral"
+            stroke="white"
+            stroke-width="3"
+          ></circle>
+          <polyline
+            points="250 430 250 650"
+            stroke="white"
+            stroke-width="3"
+          ></polyline>
+          <polyline
+            points="350 430 350 650"
+            stroke="white"
+            stroke-width="3"
+          ></polyline>
+          <polyline
+            points="300 415 300 650"
+            stroke="white"
+            stroke-width="3"
+          ></polyline>
+          <path
+            d="M 250 430 Q 300 400 350 430"
+            stroke="white"
+            stroke-width="3"
+            fill="transparent"
+          />
+          <polygon
+            points="400,0 580,260 200, 260"
+            style="fill: coral; stroke: white; stroke-width: 3"
+          />
+
+          <rect
+            x="470"
+            y="70"
+            width="45"
+            height="130"
+            stroke="white"
+            stroke-width="3"
+            fill="coral"
+          ></rect>
+
+          <rect x="392" y="300" width="70" height="50" fill="white"></rect>
+          <rect x="470" y="356" width="70" height="50" fill="white"></rect>
+          <rect x="392" y="356" width="70" height="50" fill="white"></rect>
+          <rect x="470" y="300" width="70" height="50" fill="white"></rect>
+        </svg>
+      </div>
+      <div class="container">
+        <h2>CANVAS</h2>
+        <canvas width="800" height="600" id="house-canvas"></canvas>
+      </div>
+    </div>
+  </body>
+  <script>
+    const canvas = document.getElementById("house-canvas");
+    const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "coral";
+    ctx.strokeStyle = "white";
+    ctx.lineWidth = "3";
+    ctx.save();
+
+    ctx.beginPath();
+    ctx.moveTo(100, 260);
+    ctx.lineTo(300, 10);
+    ctx.lineTo(500, 260);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillRect(381, 60, 45, 120);
+    ctx.strokeRect(381, 60, 45, 140);
+    ctx.fillRect(378, 198, 55, 5);
+
+    ctx.fillRect(100, 260, 400, 300);
+    ctx.strokeRect(100, 260, 400, 300);
+
+    ctx.fillStyle = "white";
+    ctx.fillRect(325, 300, 70, 45);
+    ctx.fillRect(400, 300, 70, 45);
+    ctx.fillRect(325, 350, 70, 45);
+    ctx.fillRect(400, 350, 70, 45);
+
+    ctx.beginPath();
+    ctx.restore();
+    ctx.moveTo(200, 423);
+    ctx.lineTo(200, 560);
+    ctx.moveTo(140, 433);
+    ctx.lineTo(140, 560);
+    ctx.moveTo(260, 434);
+    ctx.lineTo(260, 560);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(199, 562, 140, 1.355 * Math.PI, 1.65 * Math.PI);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(185, 510, 5, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(215, 510, 5, 0, 2 * Math.PI);
+    ctx.stroke();
+  </script>
+</html>

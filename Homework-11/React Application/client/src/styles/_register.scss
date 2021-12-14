@@ -1,0 +1,62 @@
+:root {
+  --left-color: #9fdeaf;
+  --right-color: #96dbe2;
+}
+
+.register-container {
+  border-radius: 10px;
+  width: 1000px;
+  margin: 250px auto;
+  box-shadow: 1px 1px 20px -5px;
+}
+
+.register-info {
+  background-image: linear-gradient(
+    to right,
+    var(--left-color),
+    var(--right-color)
+  );
+  border-radius: 10px;
+  color: white;
+  height: 400px;
+  padding: 50px 10px;
+
+  .signin-btn {
+    border: 2px solid white;
+    padding: 5px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 15px;
+    color: white;
+  }
+}
+
+.register-form {
+  align-items: center;
+  h1 {
+    color: var(--left-color);
+    text-align: center;
+  }
+
+  input {
+    width: 300px;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #e4e4e494;
+  }
+
+  .sign-up {
+    background-color: #9fdeaf;
+    color: white;
+    padding: 5px 25px;
+    border-radius: 20px;
+    width: 150px;
+    border: none;
+    margin-top: 20px;
+  }
+
+  .sign-up:disabled {
+    border: 2px solid red;
+  }
+}

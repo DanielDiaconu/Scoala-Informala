@@ -1,0 +1,121 @@
+.mt-50 {
+  margin-top: 100px;
+}
+
+.addtask-btn {
+  padding: 5px 20px;
+  margin-left: 10px;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #1e73be;
+  background-color: white;
+  color: #1e73be;
+}
+
+.addtask-btn:hover {
+  background-color: #1e73be;
+  border: 2px solid white;
+  color: white;
+}
+
+.task-item {
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px;
+  -webkit-box-shadow: 8px 11px 18px 4px rgba(0, 0, 0, 0.29);
+  box-shadow: 8px 11px 18px 4px rgba(0, 0, 0, 0.29);
+
+  .fa-trash {
+    color: red;
+  }
+
+  .fa-check {
+    color: green;
+  }
+
+  .created-at {
+    font-size: 12px;
+
+    &::before {
+      content: "-";
+      margin: 0px 5px;
+    }
+  }
+
+  .due-date {
+    font-size: 12px;
+    &:before {
+      content: "-";
+      margin: 0px 5px;
+    }
+  }
+}
+
+.task-form {
+  width: 500px;
+  margin: 10px auto;
+
+  input {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border: 2px solid grey;
+    margin-top: 5px;
+    border-radius: 10px;
+  }
+
+  select {
+    margin-top: 5px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+
+  textarea {
+    padding: 5px 10px;
+    border: 2px solid grey;
+    border-radius: 10px;
+  }
+
+  .save-task-btn {
+    border: 2px solid #1e73be;
+    background-color: white;
+    width: 100px;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: #1e73be;
+    color: white;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: white;
+      border: 2px solid #1e73be;
+      color: #1e73be;
+    }
+  }
+
+  .save-task-btn:disabled {
+    background-color: white;
+    color: grey;
+    border: 2px solid red;
+  }
+}
+
+.task-item.toBeCompleted {
+  border-top: 5px solid coral;
+}
+
+.task-item.completed {
+  border-top: 5px solid gold;
+}
+
+.task-item.inProgress {
+  border-top: 5px solid #1e73be;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

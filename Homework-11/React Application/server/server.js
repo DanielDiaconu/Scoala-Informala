@@ -11,7 +11,9 @@ const usersRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const taskRoute = require("./routes/tasks");
 
+app.use(express.static("public"));
 app.use(express.urlencoded());
+
 app.use("/users", usersRoute);
 app.use("/", authRoute);
 app.use("/tasks", taskRoute);

@@ -10,6 +10,38 @@ exports.getTasks = async (req, res) => {
   }
 };
 
+exports.getCompletedTasks = async (req, res) => {
+  let { id } = req.params;
+  try {
+    const tasks = await Task.find({ user: id, status: "completed" });
+    console.log(tasks);
+    res.status(200).json(tasks);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+
+exports.getProgressTasks = async (req, res) => {
+  let { id } = req.params;
+  try {
+    const tasks = await Task.find({ user: id, status: "inProgress" });
+    console.log(tasks);
+    res.status(200).json(tasks);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+exports.getToBeCompletedTasks = async (req, res) => {
+  let { id } = req.params;
+  try {
+    const tasks = await Task.find({ user: id, status: "toBeCompleted" });
+    console.log(tasks);
+    res.status(200).json(tasks);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+
 exports.postTask = async (req, res) => {
   let body = req.body;
   const newTask = new Task({
@@ -48,7 +80,7 @@ exports.deleteTask = async (req, res) => {
   let { id } = req.params;
   try {
     let task = await Task.deleteOne({ _id: id });
-    res.status(300).json(task);
+    res.status(200).json(task);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }

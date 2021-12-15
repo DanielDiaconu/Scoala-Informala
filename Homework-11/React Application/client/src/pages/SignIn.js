@@ -44,14 +44,14 @@ function SignIn() {
             <h1>Sign In</h1>
             <form className="d-flex flex-column align-items-center">
               <input
-                type="text"
+                type="email"
                 placeholder="Email"
                 name="email"
                 value={user.email}
                 onChange={onInputChange}
               />
               <input
-                type="text"
+                type="password"
                 placeholder="Password"
                 name="password"
                 value={user.password}

@@ -38,9 +38,13 @@ function Tasks() {
   };
 
   const deleteTask = async (id) => {
-    let res = await axios.delete(`http://localhost:8080/tasks/${id}`);
-    const updatedTasks = tasks.filter((task) => task._id !== id);
-    setTasks(updatedTasks);
+    try {
+      await axios.delete(`http://localhost:8080/tasks/${id}`);
+      const updatedTasks = tasks.filter((task) => task._id !== id);
+      setTasks(updatedTasks);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {

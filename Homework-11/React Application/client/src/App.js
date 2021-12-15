@@ -6,6 +6,7 @@ import "./styles/global.scss";
 import "react-toastify/dist/ReactToastify.css";
 import Register from "./pages/Register";
 import SignIn from "./pages/SignIn";
+import User from "./components/user/User";
 
 function App() {
   return (
@@ -17,9 +18,13 @@ function App() {
         <Route path="/sign-in">
           <SignIn />
         </Route>
-        <Route path="/">
+        <Route path="/" exact>
           <Navigation />
           <Tasks />
+        </Route>
+        <Route path="/account">
+          <Navigation />
+          <User />
         </Route>
       </Switch>
     </Router>

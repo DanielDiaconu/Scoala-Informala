@@ -14,12 +14,12 @@ function Navigation() {
       <div className="container">
         <div className="d-flex justify-content-between align-items-center my-3">
           <img className="nav-logo col-3" src="images/tasks.png" alt="logo" />
-          <ul className="d-flex align-items-center col-3">
+          <ul className="d-flex align-items-center col-6 col-lg-3">
             <li>
               <Link to="/">Tasks</Link>
             </li>
             <li>
-              <Link>Account</Link>
+              <Link to="/account">Account</Link>
             </li>
             {!token && (
               <li>

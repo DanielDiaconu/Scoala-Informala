@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 function Tasks() {
   const [tasks, setTasks] = useState([]);
-  const [user, setUser] = useState({});
   const token = sessionStorage.getItem("auth_token");
 
   const getTasks = async () => {
@@ -56,15 +55,20 @@ function Tasks() {
   return (
     <div className="container mt-50 py-5">
       <div className="">
-        <h1>Manage your daily tasks with us!</h1>
+        <h1 className="text-center my-3" style={{ color: "#1e73be" }}>
+          Manage your daily tasks with us!
+        </h1>
         <AddTask addNewtask={addnewTask} />
-        {tasks.length > 0 ? (
+        {tasks?.length === 0 ? (
+          <h3 className="my-5">You currently have no tasks!</h3>
+        ) : (
           <TasksList
             tasks={tasks}
             toggleCompleted={toggleCompleted}
             deleteTask={deleteTask}
           />
-        ) : (
+        )}
+        {!token && (
           <h3 className="text-muted mt-5">
             To view your tasks please <Link to="/sign-in">sign in</Link>
           </h3>

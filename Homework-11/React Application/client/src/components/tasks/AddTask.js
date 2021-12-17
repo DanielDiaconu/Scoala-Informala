@@ -24,6 +24,7 @@ function AddTask({ addNewtask }) {
     e.preventDefault();
     addNewtask(task);
     setToggleAddTask(false);
+    setTask(initObject);
   };
 
   const onInputChange = (e) => {
